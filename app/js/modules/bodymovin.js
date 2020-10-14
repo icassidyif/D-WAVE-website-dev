@@ -1,28 +1,72 @@
 import lottie from "lottie-web";
+import $ from "jquery";
 
-const bm = document.querySelector('#bm');
-const bm2 = document.querySelector('#bm2');
-function bodyMovin () {
-  lottie.loadAnimation({
-    container: bm, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
+//Burger animation
+const burgerContainer = document.querySelector('#bm2');
 
-    path: 'assets/design.json' // the path to the animation json
-  });
-  lottie.setSpeed(1);
-  lottie.loadAnimation({
-    container: bm2, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
+let burgerAnimation = lottie.loadAnimation({
+  container: burgerContainer,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/burger.json'
+});
 
-    path: 'assets/auto.json' // the path to the animation json
-  });
-  lottie.setSpeed(1);
+
+let burgerOpen = false;
+let animationClickInProgress = false;
+
+hoverBurger();
+clickBurger();
+
+function hoverBurger() {
+  if(burgerOpen) {
+    $(burgerContainer).unbind('mouseenter mouseleave');
+  } else {
+    $(burgerContainer).hover(
+      // hover in
+      () => {
+        if(animationClickInProgress) {
+          burgerAnimation.onComplete = () => {animationClickInProgress = false;}
+        } else {
+          hoverIn();
+        }
+      },
+      //hover out
+      () => {
+        if(animationClickInProgress) {
+          burgerAnimation.onComplete = () => {animationClickInProgress = false; hoverOut(); hoverBurger();}
+        } else {
+          hoverOut();
+        }
+      })
+  }
+}
+
+function clickBurger() {
+  $(burgerContainer).click(() => {
+    burgerOpen = !burgerOpen;
+    if(!burgerOpen) {
+      $(burgerContainer).unbind('mouseenter mouseleave');
+      burgerAnimation.playSegments([20, 10], true);
+      animationClickInProgress = true;
+      hoverBurger();
+      burgerAnimation.onComplete = () => {animationClickInProgress = false; hoverBurger();}
+    }else {
+      $(burgerContainer).unbind('mouseenter mouseleave');
+      burgerAnimation.playSegments([10, 20], true);
+    }
+  })
+}
+
+function hoverIn() {
+  burgerAnimation.playSegments([0, 10], true);
+  burgerAnimation.onComplete = () => {};
+}
+function hoverOut() {
+  burgerAnimation.playSegments([10, 0], true);
+  burgerAnimation.onComplete = () => {};
 }
 
 
-
-export default bodyMovin;
+export {burgerAnimation};

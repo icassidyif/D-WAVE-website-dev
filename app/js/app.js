@@ -1,10 +1,10 @@
-import functions from "./modules/function";
-import bodyMovin from "./modules/bodymovin";
-
+import * as functions from "./modules/function";
+import {burgerAnimation} from "./modules/bodymovin";
+import $ from "jquery";
 
 window.addEventListener('DOMContentLoaded', () => {
-  functions();
-  bodyMovin();
+
+
 
 })
 

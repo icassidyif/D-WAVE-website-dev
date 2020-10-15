@@ -1,6 +1,8 @@
 import * as functions from "./modules/function";
-import {burgerAnimation} from "./modules/bodymovin";
-import $ from "jquery";
+import * as animations from "./modules/bodymovin";
+import * as slickSlider from "./modules/slick";
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
 

@@ -25,3 +25,31 @@
     font-style: $style
     font-weight: $weight
     src: $src
+
+// breakpoints by Cassidy
+=breakpoint($point)
+  @if $point == min
+    //UltraSmall devices
+    @media (min-width: #{$screen-min-min})
+      @content
+  @else if $point == sm
+    //Small devices
+    @media (min-width: #{$screen-sm-min})
+      @content
+  @else if $point == md
+    // Medium devices
+    @media (min-width: #{$screen-md-min})
+      @content
+  @else if $point == lg
+    // Large devices
+    @media (min-width: #{$screen-lg-min})
+      @content
+  @else if $point == xl
+    // Extra large devices
+    @media (min-width: #{$screen-xl-min})
+      @content
+  @else
+    // Custom devices
+    @media (min-width: #{$point + 'px'})
+      @content
+

@@ -1,0 +1,13 @@
+// insert icon from iconSprite=========================
+mixin icon(name, mode)
+  -mode = mode || ''
+  svg(class="svg-" + name + ' ' + mode)
+    use(xlink:href="img/icons-sprite/icons.svg#" + name)
+//======================================================
+
+//insert img tag========================================
+mixin image(title, className)
+  -title = title || 'none'
+  -className = className || ' '
+  img(src='img/'+ title, alt = title class = className)
+//======================================================

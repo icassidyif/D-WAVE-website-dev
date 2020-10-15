@@ -1,12 +1,12 @@
+include particles/_mixins
 include particles/_head
 body
   .wrapper
-    h1 Індивідуальний підхід до розробки
-      span  веб дизайну
-    | Деякий текст для тестування відображення
-    #bm
-    #bm2
-    img(src='img/profile.jpg' style='max-width: 500px' alt='some text')
+    include particles/_header
+    .page
+      include particles/_main-block
+
+    include particles/_footer
 
 
   script(src='js/script.js')

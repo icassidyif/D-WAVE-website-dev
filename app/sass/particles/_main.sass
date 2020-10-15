@@ -13,20 +13,39 @@ h1,h2,h3,h4
     font-weight: inherit
     font-size: inherit
     line-height: inherit
-h1
-  font-size: $h1-size
-  line-height: $h1-lh
-h2
-  font-size: $h2-size
-  line-height: $h2-lh
-h3
+h1,.text-size-1
   font-size: $h3-size
   line-height: $h3-lh
-h3
+  +breakpoint(sm)
+    font-size: $h2-size
+    line-height: $h2-lh
+  +breakpoint(md)
+    font-size: $h1-size
+    line-height: $h1-lh
+h2,.text-size-2
+  font-size: $h2-size
+  line-height: $h2-lh
+h3,.text-size-3
+  font-size: $h3-size
+  line-height: $h3-lh
+h4,.text-size-4
   font-size: $h4-size
   line-height: $h4-lh
+h5,.text-size-5
+  font-size: $h5-size
+  line-height: $h5-lh
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+.page
+  flex: 1 auto
 
 
-#bm2
-  width: 70px
-  cursor: pointer
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+

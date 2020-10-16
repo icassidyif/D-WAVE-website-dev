@@ -1,0 +1,72 @@
+.main-reviews
+
+
+
+.reviews-card
+  display: grid
+  grid-template: auto 1fr / minmax(270px, auto)
+  grid-column-gap: 50px
+  grid-row-gap: 20px
+  align-items: center
+  +breakpoint(md)
+    grid-template: 1fr / minmax(270px, auto) 1fr
+  +breakpoint(lg)
+    grid-column-gap: 100px
+  &__author
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: start
+  &__avatar
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    overflow: hidden
+    margin: 0 0 20px 0
+    img
+      width: 100%
+  &__name
+    font-size: $h5-size
+    line-height: $h5-lh
+    font-weight: 700
+    color: #ffffff
+    margin: 0 0 2px 0
+    span
+      color: $accent-color
+  &__review
+  &__quote
+    text-align: center
+    margin: 0 0 10px 0
+    +breakpoint(md)
+      text-align: left
+    svg
+      width: 70px
+      height: 70px
+  &__text
+    font-size: $h5-size
+    line-height: $h5-lh
+
+
+
+.slider-main-reviews
+  .slick-slide
+  .slick-arrow
+    width: 27px
+    height: 27px
+    top: calc(150px / 2 - 27px / 2)
+    z-index: 2
+    transition: all .2s ease-out
+    &:hover
+      transform: scale(1.2)
+    &.slick-prev
+      left: calc(50% - 27px - 75px - 40px)
+      background: url('../img/icons-sprite/icons.svg#slider-prev') no-repeat
+      +breakpoint(md)
+        left: 0
+
+    &.slick-next
+      right: calc(50% - 27px - 75px - 40px)
+      background: url('../img/icons-sprite/icons.svg#slider-next') no-repeat
+      +breakpoint(md)
+        left: calc(270px - 27px)
+        right: unset

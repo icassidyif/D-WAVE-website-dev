@@ -1,6 +1,7 @@
-import * as functions from "./modules/function";
-import * as animations from "./modules/bodymovin";
-import * as slickSlider from "./modules/slick";
+import "./modules/function";
+import "./modules/bodymovin";
+import "./modules/slick";
+import './modules/scrollAnimation';
 
 
 

@@ -24,15 +24,9 @@ ibg(isWebPi); // запуск перевірки IBG. Функція визна�
 //footer copyright====================================================
 (function generateCopyRight() {
   let spanElement = document.createElement('span');
-  let spanElement2 = document.createElement('span');
-  let copyRight = `<a href="#">D-wave studio</a> © 2019 - ${new Date().getFullYear()}р.`;
-  let devRight = `Розроблено студією <a target="_blank" href="https://dwave.space/"> d-wave </a>`;
-  spanElement.innerHTML = copyRight;
-  spanElement2.innerHTML = devRight;
-
+  spanElement.innerHTML = `©${new Date().getFullYear()}р. <a href="/">D-wave studio</a> `;
   if(document.querySelector('.copyright')) {
     document.querySelector('.copyright__main').append(spanElement);
-    document.querySelector('.copyright__develop').append(spanElement2);
   }
 })();
 // end footer copyright

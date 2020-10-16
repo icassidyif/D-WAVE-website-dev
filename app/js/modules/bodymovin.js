@@ -53,6 +53,7 @@ function clickBurgerListener() {
     burgerOpen = !burgerOpen;
     const mainMenu = document.querySelector('.main-menu');
     mainMenu.classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
     if(supportsTouch) {
       clickBurger();
     } else {
@@ -81,3 +82,43 @@ function hoverOut() {
 }
 //End Burger animation
 
+//Icons animations
+const weDev = document.querySelector('#web-dev-icon');
+const autoIcon = document.querySelector('#auto-icon');
+const designIcon = document.querySelector('#design-icon');
+const adIcon = document.querySelector('#ad-icon');
+
+export const weDevAnim= lottie.loadAnimation({
+  container: weDev,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/prog.json'
+});
+
+export const autoAnim = lottie.loadAnimation({
+  container: autoIcon,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/auto.json'
+});
+export const designAnim = lottie.loadAnimation({
+  container: designIcon,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/design.json'
+});
+export const adAnim = lottie.loadAnimation({
+  container: adIcon,
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/rate.json'
+});
+weDevAnim.setSpeed(.5);
+autoAnim.setSpeed(.5);
+designAnim.setSpeed(.5);
+adAnim.setSpeed(.5);
+//END Icons animations

@@ -1,0 +1,26 @@
+.main-partners
+  background-color: $second-color
+  padding: 70px 0
+  &__wrapper
+    display: grid
+    grid-template:  auto 1fr/ minmax(auto, auto)
+    grid-row-gap: 30px
+    +breakpoint(md)
+      grid-template: 1fr / minmax(auto, 200px) 1fr
+      grid-column-gap: 70px
+      align-items: center
+  &__label
+    color: #ffffff
+    text-align: center
+    +breakpoint(md)
+      text-align: left
+
+
+
+.slider-main-partners
+  box-sizing: border-box
+  .slick-slide
+    margin: 0 15px
+  img
+    height: 70px
+

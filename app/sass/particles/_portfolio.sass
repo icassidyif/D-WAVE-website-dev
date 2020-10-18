@@ -1,0 +1,186 @@
+.portfolio
+  height: 100%
+  padding: 50px 0
+  +breakpoint(md)
+    padding: 70px 0
+  +breakpoint(lg)
+    padding: 100px 0
+  &__title
+    font-size: $h2-size
+    line-height: $h2-lh
+  &__filter-tags
+    margin: 0 0 50px 0
+
+
+.header-project
+  padding: 20px 0 10px 0
+  width: 100%
+  background-color: #1C1C1C
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &__title
+    margin: 0 30px 10px 0
+    span
+      color: $accent-color
+      margin: 0 10px
+  &__tags
+    font-size: $h5-size
+    line-height: $h5-lh
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 10px 0
+    li
+      margin: 0 20px 0 0
+      +breakpoint(sm)
+        margin: 0 30px 0 0
+      +breakpoint(lg)
+        margin: 0 50px 0 0
+      &:last-child
+        margin: 0
+
+.body-project
+  padding: 50px 0 10px 0
+  +breakpoint(md)
+    padding: 50px
+  &__container
+    position: relative
+    +breakpoint(md)
+      overflow: hidden
+  &__wrapper
+    position: relative
+    top: -40px
+    +breakpoint(md)
+      position: absolute
+      top: unset
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%) translateY(calc(100% - 40px))
+      width: 100%
+      max-width: 800px
+      transition: all .3s ease-out
+      &.active
+        transform: translateX(-50%) translateY(0)
+        .body-project__btn
+          svg
+            transform: rotate(180deg)
+          &:hover
+            svg
+              transform: rotate(180deg) translateY(-2px)
+  &__title
+    margin: 0 0 20px 0
+    span
+      color: $accent-color
+      margin: 0 10px
+  &__btn
+    position: relative
+    left: calc(50% - 70px / 2)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 70px
+    height: 40px
+    background-color: rgba(0, 0, 0, 0.75)
+    +breakpoint(md)
+      top: 0
+      left: calc(50% - 70px / 2)
+    svg
+      width: 20px
+      height: 20px
+      transition: all .3s ease-out
+      &:first-child
+        display: block
+        +breakpoint(md)
+          display: none
+      &:last-child
+        display: none
+        +breakpoint(md)
+          display: block
+    &:hover
+      svg
+        transform: translateY(-2px)
+  &__content
+    padding: 20px 20px
+    background: rgba(0, 0, 0, 0.85)
+    +breakpoint(sm)
+      padding: 30px 50px
+    p
+      margin: 0 0 15px 0
+      &:last-child
+        margin: 0
+    +breakpoint(md)
+      padding: 50px
+      background: rgba(0, 0, 0, 0.75)
+  &__close
+    display: flex
+    justify-content: flex-end
+    +breakpoint(md)
+      display: none
+      visibility: hidden
+    svg
+      width: 25px
+      height: 25px
+      transition: all .2s ease-out
+    &:hover
+      svg
+        transform: scale(1.1)
+  &__website
+    margin: -10px 0 40px 0
+    div
+      max-width: 800px
+      margin: 0 auto
+      display: flex
+      justify-content: flex-end
+    a
+      font-size: $body-text
+      color: #ffffff
+      &:after
+        background-color: $accent-color
+    +breakpoint(md)
+      margin: 40px 0 0 0
+
+
+
+
+
+
+
+
+
+.project-portfolio__slider
+
+  img
+    width: 100%
+  visibility: hidden
+  .slick-list
+    max-width: 800px
+    margin: 0 auto
+  .slick-slide
+   // margin: 0 15px
+  .slick-arrow
+    width: 27px
+    height: 27px
+    top: calc(50% - 27px / 2)
+    transition: all .2s ease-out
+    display: none!important
+    +breakpoint(890)
+      display: block!important
+    &:hover
+      transform: scale(1.2)
+    &.slick-prev
+      left: 5px
+      background: url('../img/icons-sprite/icons.svg#slider-prev') no-repeat
+    &.slick-next
+      right: 5px
+      background: url('../img/icons-sprite/icons.svg#slider-next') no-repeat
+
+
+//pushpin styles
+.pinned
+  position: fixed !important
+  z-index: 2
+.pin-top, .pin-bottom
+  position: relative
+  z-index: 2

@@ -124,12 +124,57 @@
     background-color: #ffffff
     bottom: 0
     transition: width .2s ease-out
-  &:hover
+  +breakpoint(lg)
+    &:hover
+      &:after
+        width: 0
+
+
+.tags
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  li
+    margin: 0 15px 0 0
+    &:last-child
+      margin: 0
+    +breakpoint(md)
+      margin: 0 50px 0 0
+  &__hash
+    color: $accent-color
+    font-size: $h3-size
+    margin: 0 7px 0 0
+    transition: all .2s ease-out
+  &__text
+    transition: all .2s ease-out
+    font-size: $h4-size
+    line-height: $h3-lh
+    position: relative
     &:after
-      width: 0
-
-
-
+      content: ''
+      position: absolute
+      left: 0
+      width: 100%
+      bottom: 0
+      height: 1px
+      background-color: #ffffff
+      transition: width .2s ease-out
+  a
+    color: #ffffff
+    display: flex
+    align-items: center
+    +breakpoint(lg)
+      &:hover
+        .tags__text
+          transform: translateX(2px)
+          &:after
+            width: 0
+        .tags__hash
+          transform: translateX(-2px)
+    &.active
+      .tags__text
+        &:after
+          width: 100%
 
 @keyframes waves
   0%

@@ -1,4 +1,10 @@
 .footer
+  border-top: 1px solid rgba(186, 207, 248, 0.25)
+  padding: 55px 0 0 0
+  +breakpoint(md)
+    padding: 70px 0 0 0
+  +breakpoint(lg)
+    padding: 100px 0 0 0
   &__wrapper
     display: grid
     grid-template: 1fr / repeat(auto-fit, minmax(auto, 270px))

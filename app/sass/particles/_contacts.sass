@@ -1,0 +1,93 @@
+.contacts
+  overflow-x: hidden
+  &__body
+    display: grid
+    grid-template: auto / 1fr
+    +breakpoint(md)
+      grid-template: 1fr / 1fr 1fr
+      grid-column-gap: 30px
+  &__container
+    width: 100%
+    +breakpoint(md)
+      max-width: calc(1200px / 2 - 15px)
+  &__title
+    font-size: $h2-size
+    line-height: $h2-lh
+
+
+
+.info-contacts
+  padding: 50px 0
+  background-color: $second-color
+  .contacts__container
+    margin: 0 auto
+    padding: 0 15px
+    +breakpoint(md)
+      margin: 0 0 0 auto
+      padding: 0 0 0 15px
+  &__title
+    text-align: left!important
+    margin: 0 0 30px 0!important
+  &__block
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 15px 0
+    &:last-child
+      margin: 0
+  &__contact
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin: 0 40px 25px 0
+  &__icon
+    a
+      svg
+        margin: 0 -10px 0 0
+      +breakpoint(md)
+        &:hover
+          transform: scale(1.1)
+  svg
+    width: 35px
+    height: 35px
+    margin: 5px 20px 0 0
+  a
+    display: block
+    color: $font-color
+    font-size: $h5-size
+    line-height: $h5-lh
+    transition: all .2s ease-out
+    +breakpoint(md)
+      &:hover
+        color: #ffffff
+
+
+
+.form-contacts
+  padding: 50px 0
+  .contacts__container
+    margin: 0 auto
+    padding: 0 15px
+    +breakpoint(md)
+      margin: 0 auto 0 0
+      padding: 0 15px 0 0
+  &__title
+    text-align: left!important
+    margin: 0 0 30px 0!important
+  &__btn
+    svg
+      width: 22px!important
+      height: 22px!important
+  &__wrapper
+    display: grid
+    grid-template: auto auto auto auto / 1fr
+    margin: 0 0 30px 0
+    +breakpoint(sm)
+      grid-template: auto auto auto / 1fr 1fr
+      grid-column-gap: 30px
+      margin: 0 0 45px 0
+  .input-field
+    &:nth-child(1),
+    &:nth-child(4)
+      grid-column: span 1
+      +breakpoint(sm)
+        grid-column: span 2

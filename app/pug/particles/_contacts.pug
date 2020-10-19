@@ -1,0 +1,81 @@
+section.contacts.self-block
+  h1.contacts__title.title.anim-item.anim-no-hide.anim-show-from-top Наші<span>контакти</span>
+  .contacts__body
+
+    .contacts__information.info-contacts.anim-item.anim-no-hide.anim-show-from-left
+      .contacts__container
+        h4.info-contacts__title.title Контакти
+        .info-contacts__block
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('phone-footer')
+            p
+              a(href='tel:050050054') +38 (067) 757 77 77
+              a(href='tel:050050054') +38 (067) 757 77 77
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('email-footer')
+            p
+              a(href='mailto:d.wave@gmail.com') d.wave@gmail.com
+        h4.info-contacts__title.title Месенджери
+        .info-contacts__block
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('wapp-footer')
+            p
+              a(href='#') +38 (067) 757 77 77
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('telegram-footer')
+            p
+              a(href='#') @dwave_space
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('viber-footer')
+            p
+              a(href='#') +38 (067) 757 77 77
+          .info-contacts__contact
+            .info-contacts__icon
+              +icon('messenger-footer')
+            p
+              a(href='#') @dwave_space
+        h4.info-contacts__title.title Ми в соцмережах
+        .info-contacts__block
+          .info-contacts__contact
+            .info-contacts__icon
+              a(href='#')
+                +icon('instagram-footer')
+          .info-contacts__contact
+            .info-contacts__icon
+              a(href='#')
+                +icon('facebook-footer')
+        h4.info-contacts__title.title Наша адреса
+        .info-contacts__block
+          p 76000 м. Івано-Франківськ, вул. Чорновола 20А/2А
+
+
+
+
+    .contacts__form.form-contacts.anim-item.anim-no-hide.anim-show-from-right
+      .contacts__container
+        h4.form-contacts__title.title Напишіть нам
+        form#contact-form
+          .form-contacts__wrapper
+            .input-field
+              input(id="name-contact" name='name' type="text").validate
+              label(for="name-contact") Ваше ім'я
+            .input-field
+              input(id="phone-contact" name='phone' type="text").validate
+              label(for="phone-contact") Контактний номер
+            .input-field
+              input(id="mail-contact" name='email' type="email")
+              label(for="mail-contact") Електронна пошта
+            .input-field
+              textarea(id="message-contact" name='message').materialize-textarea
+              label(for="message-contact") Ваше повідомлення
+          button(type='submit').form-contacts__btn.btn
+            span.btn__text Надіслати
+            +icon('btn-send')
+
+
+

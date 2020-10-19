@@ -1,63 +1,46 @@
 .btn
-  position: relative
   background-color: transparent
   display: inline-flex
   align-items: center
   color: #ffffff
   font-weight: 700
-  font-size: 16px
-  line-height: 24px
+  font-size: $body-text
+  line-height: $body-lh
   letter-spacing: 0.15em
-  padding: 7px 10px
+  padding: 10px 15px
   border: 2px solid #ffffff
-  +breakpoint(550)
-    border: none
+  +breakpoint(md)
+    padding: 15px 20px
   +breakpoint(lg)
-    padding: 15px 25px
-    &:before
-      content: ''
-      position: absolute
-      left: 0
-      bottom: 0
-      width: 0
-      height: 0
-      border: 2px solid transparent
-    &:after
-      content: ''
-      position: absolute
-      right: 0
-      top: 0
-      width: 0
-      height: 0
-      border: 2px solid transparent
     &:hover
-      &:before
-        height: 100%
-        width: 100%
-        border: 2px solid #ffffff
-        border-right: none
-        border-bottom: none
-        transition: height .1s ease-out, width .2s ease-out .1s
-      &:after
-        height: 100%
-        width: 100%
-        border: 2px solid #ffffff
-        border-left: none
-        border-top: none
-        transition: height .1s ease-out, width .2s ease-out .1s
       svg
         transform: translateX(0)
   &__text
-    display: none
-    margin: 0 25px 0 0
-    +breakpoint(550)
-      display: inline
+    margin: 0 15px 0 0
+    +breakpoint(md)
+      margin: 0 25px 0 0
   svg
+    transition: all .2s ease-out
     width: 12px
     height: 20px
-    transition: all .2s ease-out
-    +breakpoint(550)
+    +breakpoint(md)
       transform: translateX(-5px)
+
+  &_header
+    .btn__text
+      display: none
+      +breakpoint(sm)
+        display: inline
+    svg
+      display: none
+      +breakpoint(sm)
+        display: block
+      + svg
+        display: block
+        width: 19px
+        height: 23px
+        +breakpoint(sm)
+          display: none
 
 .btn-wave
   position: relative
@@ -105,10 +88,10 @@
       border-radius: 44%
       animation: waves 10s infinite linear
 
+
 .title
   text-align: center
   margin: 0 0 70px 0
-
 
 .link
   letter-spacing: 0.15em

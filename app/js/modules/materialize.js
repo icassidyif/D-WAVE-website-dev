@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // End modal windows
 
 
+  // Toasts
+
+  // END Toasts
 
 });
 

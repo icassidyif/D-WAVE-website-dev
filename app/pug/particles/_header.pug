@@ -1,30 +1,36 @@
 header.header
-  nav.header__menu.main-menu
-    video(autoplay muted loop)#menu-block-video
-      source(src='assets/wave-menu.mp4' type='video/mp4')
-    ul
-      li
-        a(href='/') Головна
-      li
-        a(href='/portfolio.html') Портфоліо
-      li
-        a(href='/pro-nas.html') Про нас
-      li
-        a(href='#') Контакти
-  .header__burger#burger-menu
-  .header__social
-    a(href='#')
-      +icon('telegram-header','icon_min')
-    a(href='#')
-      +icon('messenger-header','icon_min')
-    a(href='#')
-      +icon('whatsapp-header','icon_min')
-  .header__logo
-    a(href='/')
-      +image('logo.svg')
-  .header__btn
-    a(href='#').btn
-      span.btn__text Замовити
-      +icon('btn-arrow')
+  .header__container.container
+    .header__body
+      nav.header__menu.main-menu
+        video(autoplay muted loop)#menu-block-video
+          source(src='assets/wave-menu.mp4' type='video/mp4')
+        ul
+          li
+            a(href='/') Головна
+          li
+            a(href='/portfolio.html') Портфоліо
+          li
+            a(href='/pro-nas.html') Про нас
+          li
+            a(href='/contacts.html') Контакти
+      .header__burger#burger-menu
+      .header__social
+        a(href='#')
+          +icon('telegram-header','icon_min')
+        a(href='#')
+          +icon('messenger-header','icon_min')
+        a(href='#')
+          +icon('whatsapp-header','icon_min')
+      .header__logo
+        a(href='/')
+          +image('logo.svg')
+      .header__switcher.switcher
+        span#ua.active ua
+        span#en en
+      .header__btn
+        a(href='#').btn.btn_header
+          span.btn__text Замовити
+          +icon('btn-arrow')
+          +icon('order')
 
 

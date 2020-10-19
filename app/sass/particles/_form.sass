@@ -1,0 +1,103 @@
+form
+  font-size: $body-text
+  line-height: $body-lh
+  input
+    &.error
+      border-bottom: 1px solid #ff4848
+      box-shadow: 0 1px 0 0 #ff4848
+      ~ label
+        color: #ff4848
+        &.error
+          transform: scale(.8) translateY(60px)
+
+      &:focus
+        border-bottom: 1px solid #ff4848
+        box-shadow: 0 1px 0 0 #ff4848
+        ~ label
+          &.active
+            color: #ff4848
+          &.error
+            //transform: scale(.8) translateY(55px)
+
+
+
+
+  input, textarea
+    font-size: $body-text
+    line-height: $body-lh
+    background-color: transparent!important
+    color: #ffffff
+    border-bottom: 1px solid $font-color
+    height: 3rem
+    outline: none
+    width: 100%
+    margin: 0 0 8px 0
+    box-sizing: content-box
+    box-shadow: none
+    transition: box-shadow .3s, border .3s
+    &:focus
+      border-bottom: 1px solid $accent-color
+      box-shadow: 0 1px 0 0 $accent-color
+      + label
+        &.active
+          color: $accent-color
+  label
+    font-size: $body-text
+    line-height: $body-lh
+    position: absolute
+    top: 0
+    left: 0
+    cursor: text
+    transform-origin: 0% 100%
+    text-align: initial
+    transform: translateY(12px)
+    transition: transform .2s ease-out, color .2s ease-out
+    &.active:not(.error)
+      transform: translateY(-14px) scale(0.8)
+      transform-origin: 0 0
+  textarea.materialize-textarea
+    line-height: normal
+    overflow-y: hidden
+    padding: .8rem 0 .8rem 0
+    resize: none
+    min-height: 3rem
+    box-sizing: border-box
+  textarea
+    overflow: auto
+
+  input, textarea, select
+    font-family: Ubuntu, sans-serif
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus
+    border-bottom: 1px solid $accent-color
+    -webkit-text-fill-color: $font-color
+    -webkit-box-shadow: 0 1px 0 0 $accent-color
+    transition: background-color 5000s ease-in-out 0s
+
+
+
+.input-field
+  position: relative
+  margin-top: 1rem
+  margin-bottom: 1rem
+
+
+.hiddendiv
+  visibility: hidden
+  white-space: pre-wrap
+  word-wrap: break-word
+  overflow-wrap: break-word
+  padding-top: 1.2rem
+  position: absolute
+  top: 0
+  z-index: -1
+
+

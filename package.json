@@ -6,8 +6,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "jquery-validation": "^1.19.2",
     "lottie-web": "^5.7.3",
-    "magnific-popup": "^1.1.0",
     "materialize-css": "^1.0.0",
     "slick-carousel": "^1.8.1"
   },

@@ -3,33 +3,11 @@
   top: 0
   left: 0
   width: 100%
-  padding: 15px
-  grid-area: header
-  display: grid
-  grid-template: 1fr / minmax(auto,200px) minmax(100px,auto) minmax(auto,200px)
-  align-items: center
-  font-family: MontserratAlternate, sans-serif
-  height: 100px
-  font-weight: bold
   z-index: 3
+  height: 100px
   background-color: $base-color
-  +breakpoint(900)
-    grid-template: 1fr / 1fr minmax(auto, 100px) minmax(auto, 300px) minmax(190px, 430px) minmax(auto, 340px) 1fr
-  &__burger
-    display: flex
-    align-items: center
-    justify-self: start
-    position: relative
-    z-index: 5
-    width: 35px
-    height: 28px
-    cursor: pointer
-    grid-column: 1 / 2
-    +breakpoint(900)
-      grid-column: 2 / 3
   &__social
     display: none
-    //grid-column: 3 / 4
     a:not(:last-child)
       margin: 0 45px 0 0
     a
@@ -42,18 +20,70 @@
             transform: scale(1.2)
     +breakpoint(900)
       display: block
-
   &__logo
+    grid-column: 2 / 5
     justify-self: center
     max-width: 200px
-    //grid-column: 4 / 5
+    min-width: 140px
+    +breakpoint(500)
+      grid-column: 2 / 4
+    +breakpoint(md)
+      grid-column: 3 / 4
     img
       width: 100%
+  &__burger
+    display: flex
+    align-items: center
+    justify-self: start
+    position: relative
+    z-index: 5
+    width: 35px
+    height: 28px
+    cursor: pointer
   &__btn
+    grid-column: 5
     justify-self: end
+  &__switcher
+    justify-self: end
+  &__body
+    display: grid
+    grid-template: 100px / 1fr 3fr 4fr 1.5fr 2.5fr
+    grid-column-gap: 20px
+    align-items: center
+    +breakpoint(sm)
+      grid-column-gap: 30px
+
+
+.switcher
+  display: none
+  +breakpoint(500)
+    display: flex
+  span
+    position: relative
+    text-transform: uppercase
+    cursor: pointer
+    display: block
+    padding: 0 7px 0 0
+    transition: color .1s ease-out
+    border-right: 1px solid $font-color
+    +breakpoint(sm)
+      padding: 0 10px 0 0
+    &:hover
+      color: #ffffff
+    &.active
+      color: #ffffff
+    &:last-child
+      border-right: none
+      padding: 0 0 0 7px
+      +breakpoint(sm)
+        margin: 0 0 0 10px
+
+
+
 
 
 .main-menu
+  font-family: MontserratAlternates, sans-serif
   position: absolute
   font-size: $h3-size
   line-height: $h3-lh
@@ -74,6 +104,7 @@
     a
       display: block
       text-align: center
+      font-weight: 700
       color: #ffffff
       padding: 17px 0
       transition: color .2s ease-out

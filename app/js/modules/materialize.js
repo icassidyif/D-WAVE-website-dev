@@ -28,21 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   //End pushpin
 
-  // Modal windows
-  // End modal windows
-  console.log();
-
+  // Modal windows for portfolio projects
   let modalProjectWindows = document.querySelectorAll('.body-project__content');
   if (window.innerWidth < 768) {
     let instances = M.Modal.init(modalProjectWindows);
   } else {
-
     modalProjectWindows.forEach(modalWindow => {
-      //modalWindow.previousElementSibling.setAttribute('href', '#');
       modalWindow.classList.remove('modal');
     })
   }
-
+  // End modal windows
 
 
 

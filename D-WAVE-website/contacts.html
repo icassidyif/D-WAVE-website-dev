@@ -4,7 +4,6 @@
 <!--======================================================-->
 <!DOCTYPE html>
 <html lang="ua">
-
 <head>
   <title>Title of website</title>
   <meta charset="UTF-8">
@@ -13,10 +12,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style-vendors.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
 </html>
-
 <body>
   <div class="wrapper">
     <header class="header">
@@ -34,34 +38,34 @@
           </nav>
           <div class="header__burger" id="burger-menu"></div>
           <div class="header__social"><a href="#"><svg class="svg-telegram-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#telegram-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#telegram-header"/>
               </svg></a><a href="#"><svg class="svg-messenger-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#messenger-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#messenger-header"/>
               </svg></a><a href="#"><svg class="svg-whatsapp-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#whatsapp-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#whatsapp-header"/>
               </svg></a></div>
           <div class="header__logo"><a href="/">
               <picture>
-                <source srcset="img/logo.svg" type="image/webp"><img class=" " src="img/logo.svg" alt="logo.svg" />
+                <source srcset="img/logo.svg" type="image/webp"><img class=" " src="img/logo.svg" alt="logo.svg">
               </picture>
             </a></div>
           <div class="header__switcher switcher"><span class="active" id="ua">ua</span><span id="en">en</span></div>
           <div class="header__btn"><a class="btn btn_header modal-trigger" href="#modal-order"><span class="btn__text">Замовити</span><svg class="svg-btn-arrow ">
-                <use xlink:href="img/icons-sprite/icons.svg#btn-arrow"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#btn-arrow"/>
               </svg><svg class="svg-order ">
-                <use xlink:href="img/icons-sprite/icons.svg#order"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#order"/>
               </svg></a></div>
         </div>
       </div>
     </header>
     <div class="modal" id="modal-order"><a class="modal-close" href="#!"><svg class="svg-close-btn ">
-          <use xlink:href="img/icons-sprite/icons.svg#close-btn"></use>
+          <use xlink:href="img/icons-sprite/icons.svg#close-btn"/>
         </svg></a>
       <h3>Замовити<span>послугу</span></h3>
       <form class="form" id="order-form">
         <div class="form__wrapper">
           <div class="input-field"><select name="service">
-              <option value="" disabled selected>Виберіть послугу</option>
+              <option value disabled selected>Виберіть послугу</option>
               <option value="1">Розробка сайтів</option>
               <option value="2">Автоматизація бізнесу</option>
               <option value="3">Дизайн рішення</option>
@@ -71,8 +75,9 @@
           <div class="input-field"><input class="validate" id="phone-order" name="phone" type="text"><label for="phone-order">Контактний номер</label></div>
           <div class="input-field"><input id="mail-order" name="email" type="email"><label for="mail-order">Електронна пошта</label></div>
           <div class="input-field"><textarea class="materialize-textarea" id="message-order" name="message"></textarea><label for="message-order">Ваше повідомлення</label></div>
-        </div><button class="form__btn btn" type="submit"><span class="btn__text">Надіслати</span><svg class="svg-btn-send ">
-            <use xlink:href="img/icons-sprite/icons.svg#btn-send"></use>
+        </div>
+        <div class="form__captcha captcha">Captcha</div><button class="form__btn btn" type="submit"><span class="btn__text">Надіслати</span><svg class="svg-btn-send ">
+            <use xlink:href="img/icons-sprite/icons.svg#btn-send"/>
           </svg></button>
       </form>
     </div>
@@ -86,13 +91,13 @@
               <div class="info-contacts__block">
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-phone-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#phone-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#phone-footer"/>
                     </svg></div>
                   <p><a href="tel:050050054">+38 (067) 757 77 77</a><a href="tel:050050054">+38 (067) 757 77 77</a></p>
                 </div>
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-email-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#email-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#email-footer"/>
                     </svg></div>
                   <p><a href="mailto:d.wave@gmail.com">d.wave@gmail.com</a></p>
                 </div>
@@ -101,25 +106,25 @@
               <div class="info-contacts__block">
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-wapp-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#wapp-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#wapp-footer"/>
                     </svg></div>
                   <p><a href="#">+38 (067) 757 77 77</a></p>
                 </div>
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-telegram-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#telegram-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#telegram-footer"/>
                     </svg></div>
                   <p><a href="#">@dwave_space</a></p>
                 </div>
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-viber-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#viber-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#viber-footer"/>
                     </svg></div>
                   <p><a href="#">+38 (067) 757 77 77</a></p>
                 </div>
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><svg class="svg-messenger-footer ">
-                      <use xlink:href="img/icons-sprite/icons.svg#messenger-footer"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#messenger-footer"/>
                     </svg></div>
                   <p><a href="#">@dwave_space</a></p>
                 </div>
@@ -128,12 +133,12 @@
               <div class="info-contacts__block">
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><a href="#"><svg class="svg-instagram-footer ">
-                        <use xlink:href="img/icons-sprite/icons.svg#instagram-footer"></use>
+                        <use xlink:href="img/icons-sprite/icons.svg#instagram-footer"/>
                       </svg></a></div>
                 </div>
                 <div class="info-contacts__contact">
                   <div class="info-contacts__icon"><a href="#"><svg class="svg-facebook-footer ">
-                        <use xlink:href="img/icons-sprite/icons.svg#facebook-footer"></use>
+                        <use xlink:href="img/icons-sprite/icons.svg#facebook-footer"/>
                       </svg></a></div>
                 </div>
               </div>
@@ -153,7 +158,7 @@
                   <div class="input-field"><input id="mail-contact" name="email" type="email"><label for="mail-contact">Електронна пошта</label></div>
                   <div class="input-field"><textarea class="materialize-textarea" id="message-contact" name="message"></textarea><label for="message-contact">Ваше повідомлення</label></div>
                 </div><button class="form__btn btn" type="submit"><span class="btn__text">Надіслати</span><svg class="svg-btn-send ">
-                    <use xlink:href="img/icons-sprite/icons.svg#btn-send"></use>
+                    <use xlink:href="img/icons-sprite/icons.svg#btn-send"/>
                   </svg></button>
               </form>
             </div>

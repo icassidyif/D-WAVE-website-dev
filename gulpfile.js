@@ -21,6 +21,10 @@ const webpCss = require('gulp-webp-css');
 const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
+const realFavicon = require ('gulp-real-favicon');
+const fs = require('fs');
+// File where the favicon markups are stored
+const FAVICON_DATA_FILE = 'faviconData.json';
 
 //configurations
 const isProd = true;
@@ -79,6 +83,7 @@ const webpackConfig = {
 }
 // end configurations
 
+
 // TASKS-----!!!!!----------------------------------------------------------
 function browserSyncSet() {
   browserSync.init({
@@ -89,6 +94,76 @@ function browserSyncSet() {
     notify: false
   })
 }
+// Обробка FAVICON----------------------------------------------------------
+function generateFavicon(done) {
+  realFavicon.generateFavicon({
+    masterPicture: `${sourceFolder}/img/favicon.png`,
+    dest: `${projectFolder}/img/favicons`,
+    iconsPath: `/img/favicons/`,
+    design: {
+      ios: {
+        pictureAspect: 'noChange',
+        assets: {
+          ios6AndPriorIcons: false,
+          ios7AndLaterIcons: false,
+          precomposedIcons: false,
+          declareOnlyDefaultIcon: true
+        }
+      },
+      desktopBrowser: {},
+      windows: {
+        pictureAspect: 'noChange',
+        backgroundColor: '#da532c',
+        onConflict: 'override',
+        assets: {
+          windows80Ie10Tile: false,
+          windows10Ie11EdgeTiles: {
+            small: false,
+            medium: true,
+            big: false,
+            rectangle: false
+          }
+        }
+      },
+      androidChrome: {
+        pictureAspect: 'noChange',
+        themeColor: '#ffffff',
+        manifest: {
+          display: 'standalone',
+          orientation: 'notSet',
+          onConflict: 'override',
+          declared: true
+        },
+        assets: {
+          legacyIcon: false,
+          lowResolutionIcons: false
+        }
+      }
+    },
+    settings: {
+      scalingAlgorithm: 'Mitchell',
+      errorOnImageTooSmall: false
+    },
+    markupFile: FAVICON_DATA_FILE
+  }, function() {
+    done();
+  });
+}
+function injectFaviconMarkups (){
+  return src([`${projectFolder}/*.html`])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(dest(path.build.html))
+}
+function checkForFaviconUpdate (done){
+  let currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function(err) {
+    if (err) {
+      throw err;
+    }
+  });
+}
+//---------------------------------------------------------------------------
+
 function clean() {
   return del([path.clean]);
 }
@@ -206,4 +281,4 @@ function watcher() {
 }
 //--------------------------------------------------------------------------
 exports.otfToTtf = otfToTtf;
-exports.default = series(clean, parallel(ttfToWoffConverter, htmlCompiler, vendorsStylesCompiler, stylesCompiler, jsCompiler, imgCompiler, iconSprite, assetsCopy), isDev ? parallel(watcher, browserSyncSet) : nothing);
+exports.default = series(clean, parallel(ttfToWoffConverter, htmlCompiler, vendorsStylesCompiler, stylesCompiler, jsCompiler, imgCompiler, iconSprite, assetsCopy), isDev ? parallel(watcher, browserSyncSet) : series(generateFavicon,injectFaviconMarkups));

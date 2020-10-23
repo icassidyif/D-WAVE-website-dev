@@ -4,7 +4,6 @@
 <!--======================================================-->
 <!DOCTYPE html>
 <html lang="ua">
-
 <head>
   <title>Title of website</title>
   <meta charset="UTF-8">
@@ -13,10 +12,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style-vendors.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
 </html>
-
 <body>
   <div class="wrapper">
     <header class="header">
@@ -34,34 +38,34 @@
           </nav>
           <div class="header__burger" id="burger-menu"></div>
           <div class="header__social"><a href="#"><svg class="svg-telegram-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#telegram-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#telegram-header"/>
               </svg></a><a href="#"><svg class="svg-messenger-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#messenger-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#messenger-header"/>
               </svg></a><a href="#"><svg class="svg-whatsapp-header icon_min">
-                <use xlink:href="img/icons-sprite/icons.svg#whatsapp-header"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#whatsapp-header"/>
               </svg></a></div>
           <div class="header__logo"><a href="/">
               <picture>
-                <source srcset="img/logo.svg" type="image/webp"><img class=" " src="img/logo.svg" alt="logo.svg" />
+                <source srcset="img/logo.svg" type="image/webp"><img class=" " src="img/logo.svg" alt="logo.svg">
               </picture>
             </a></div>
           <div class="header__switcher switcher"><span class="active" id="ua">ua</span><span id="en">en</span></div>
           <div class="header__btn"><a class="btn btn_header modal-trigger" href="#modal-order"><span class="btn__text">Замовити</span><svg class="svg-btn-arrow ">
-                <use xlink:href="img/icons-sprite/icons.svg#btn-arrow"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#btn-arrow"/>
               </svg><svg class="svg-order ">
-                <use xlink:href="img/icons-sprite/icons.svg#order"></use>
+                <use xlink:href="img/icons-sprite/icons.svg#order"/>
               </svg></a></div>
         </div>
       </div>
     </header>
     <div class="modal" id="modal-order"><a class="modal-close" href="#!"><svg class="svg-close-btn ">
-          <use xlink:href="img/icons-sprite/icons.svg#close-btn"></use>
+          <use xlink:href="img/icons-sprite/icons.svg#close-btn"/>
         </svg></a>
       <h3>Замовити<span>послугу</span></h3>
       <form class="form" id="order-form">
         <div class="form__wrapper">
           <div class="input-field"><select name="service">
-              <option value="" disabled selected>Виберіть послугу</option>
+              <option value disabled selected>Виберіть послугу</option>
               <option value="1">Розробка сайтів</option>
               <option value="2">Автоматизація бізнесу</option>
               <option value="3">Дизайн рішення</option>
@@ -71,8 +75,9 @@
           <div class="input-field"><input class="validate" id="phone-order" name="phone" type="text"><label for="phone-order">Контактний номер</label></div>
           <div class="input-field"><input id="mail-order" name="email" type="email"><label for="mail-order">Електронна пошта</label></div>
           <div class="input-field"><textarea class="materialize-textarea" id="message-order" name="message"></textarea><label for="message-order">Ваше повідомлення</label></div>
-        </div><button class="form__btn btn" type="submit"><span class="btn__text">Надіслати</span><svg class="svg-btn-send ">
-            <use xlink:href="img/icons-sprite/icons.svg#btn-send"></use>
+        </div>
+        <div class="form__captcha captcha">Captcha</div><button class="form__btn btn" type="submit"><span class="btn__text">Надіслати</span><svg class="svg-btn-send ">
+            <use xlink:href="img/icons-sprite/icons.svg#btn-send"/>
           </svg></button>
       </form>
     </div>
@@ -179,7 +184,7 @@
         </div>
         <div class="main-works__slider slider-main-works anim-item anim-no-hide anim-show-from-bottom">
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/ank.jpg" alt="/works/ank.jpg" /></div>
+            <div class="card-main-works__bg"><img class=" " src="img//works/ank.jpg" alt="/works/ank.jpg"></div>
             <div class="card-main-works__content">
               <h4 class="card-main-works__label">Ankshop</h4>
               <ul class="card-main-works__tags">
@@ -188,7 +193,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/sclima.jpg" alt="/works/sclima.jpg" /></div>
+            <div class="card-main-works__bg"><img class=" " src="img//works/sclima.jpg" alt="/works/sclima.jpg"></div>
             <div class="card-main-works__content">
               <h4 class="card-main-works__label">S-Clima</h4>
               <ul class="card-main-works__tags">
@@ -199,7 +204,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/streamliner.jpg" alt="/works/streamliner.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/streamliner.jpg" alt="/works/streamliner.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Guitar Store</h4>
                 <ul class="card-main-works__tags">
@@ -209,7 +214,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/smartik.jpg" alt="/works/smartik.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/smartik.jpg" alt="/works/smartik.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Smartik</h4>
                 <ul class="card-main-works__tags">
@@ -220,7 +225,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/scooter.jpg" alt="/works/scooter.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/scooter.jpg" alt="/works/scooter.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Electro Shop</h4>
                 <ul class="card-main-works__tags">
@@ -231,7 +236,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/buildgroup.jpg" alt="/works/buildgroup.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/buildgroup.jpg" alt="/works/buildgroup.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Build Corp</h4>
                 <ul class="card-main-works__tags">
@@ -242,7 +247,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/trevel.jpg" alt="/works/trevel.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/trevel.jpg" alt="/works/trevel.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Climb Club</h4>
                 <ul class="card-main-works__tags">
@@ -252,7 +257,7 @@
             </div>
           </div>
           <div class="main-works__card card-main-works">
-            <div class="card-main-works__bg"><img class=" " src="img//works/court.jpg" alt="/works/court.jpg" />
+            <div class="card-main-works__bg"><img class=" " src="img//works/court.jpg" alt="/works/court.jpg">
               <div class="card-main-works__content">
                 <h4 class="card-main-works__label">Court Graffik</h4>
                 <ul class="card-main-works__tags">
@@ -271,11 +276,11 @@
             <div class="slider-main-reviews__item">
               <div class="reviews-card">
                 <div class="reviews-card__author">
-                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg" /></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
+                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg"></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
                 </div>
                 <div class="reviews-card__review">
                   <div class="reviews-card__quote"><svg class="svg-quote ">
-                      <use xlink:href="img/icons-sprite/icons.svg#quote"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#quote"/>
                     </svg></div>
                   <p class="reviews-card__text">A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone. A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone.</p>
                 </div>
@@ -284,11 +289,11 @@
             <div class="slider-main-reviews__item">
               <div class="reviews-card">
                 <div class="reviews-card__author">
-                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg" /></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
+                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg"></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
                 </div>
                 <div class="reviews-card__review">
                   <div class="reviews-card__quote"><svg class="svg-quote ">
-                      <use xlink:href="img/icons-sprite/icons.svg#quote"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#quote"/>
                     </svg></div>
                   <p class="reviews-card__text">A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone. A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone.</p>
                 </div>
@@ -297,11 +302,11 @@
             <div class="slider-main-reviews__item">
               <div class="reviews-card">
                 <div class="reviews-card__author">
-                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg" /></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
+                  <div class="reviews-card__avatar"><img class=" " src="img//reviews/print-bar.jpg" alt="/reviews/print-bar.jpg"></div><span class="reviews-card__name">Олександр <span>Процак</span></span><span class="reviews-card__position">Co-founder of Print Studop</span>
                 </div>
                 <div class="reviews-card__review">
                   <div class="reviews-card__quote"><svg class="svg-quote ">
-                      <use xlink:href="img/icons-sprite/icons.svg#quote"></use>
+                      <use xlink:href="img/icons-sprite/icons.svg#quote"/>
                     </svg></div>
                   <p class="reviews-card__text">A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone. A visual guide could be a wireframe, creative composition, or information architecture. A device that enables collaboration will lessen the chance of work having to be completely redone.</p>
                 </div>
@@ -315,12 +320,12 @@
           <div class="main-partners__wrapper">
             <div class="main-partners__label"><span>Партнери з якими успішно співпрацюємо</span></div>
             <div class="main-partners__slider slider-main-partners">
-              <div class="main-partners__logo"><img class=" " src="img//partners/fila.png" alt="/partners/fila.png" /></div>
-              <div class="main-partners__logo"><img class=" " src="img//partners/adidas.png" alt="/partners/adidas.png" /></div>
-              <div class="main-partners__logo"><img class=" " src="img//partners/nike.png" alt="/partners/nike.png" /></div>
-              <div class="main-partners__logo"><img class=" " src="img//partners/puma.png" alt="/partners/puma.png" /></div>
-              <div class="main-partners__logo"><img class=" " src="img//partners/ritter.png" alt="/partners/ritter.png" /></div>
-              <div class="main-partners__logo"><img class=" " src="img//partners/nike.png" alt="/partners/nike.png" /></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/fila.png" alt="/partners/fila.png"></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/adidas.png" alt="/partners/adidas.png"></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/nike.png" alt="/partners/nike.png"></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/puma.png" alt="/partners/puma.png"></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/ritter.png" alt="/partners/ritter.png"></div>
+              <div class="main-partners__logo"><img class=" " src="img//partners/nike.png" alt="/partners/nike.png"></div>
             </div>
           </div>
         </div>
@@ -329,25 +334,25 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__wrapper">
-          <div class="footer__block anim-item anim-no-hide anim-show-from-left"><a class="footer__logo" href="/"><img class=" " src="img/logo.svg" alt="logo.svg" /></a>
+          <div class="footer__block anim-item anim-no-hide anim-show-from-left"><a class="footer__logo" href="/"><img class=" " src="img/logo.svg" alt="logo.svg"></a>
             <p class="footer__desc text-size-5">Розробка та впровадження IT-рішень для вашого бізнесу</p>
             <div class="footer__social"><a href="#"><svg class="svg-instagram-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#instagram-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#instagram-footer"/>
                 </svg></a><a href="#"><svg class="svg-facebook-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#facebook-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#facebook-footer"/>
                 </svg></a></div>
           </div>
           <div class="footer__block anim-item anim-no-hide anim-show-from-left anim-show-from-left_2">
             <h4 class="footer__title">Контакти</h4>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-phone-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#phone-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#phone-footer"/>
                 </svg></div>
               <p><a href="tel:050050054">+38 (067) 757 77 77</a><a href="tel:050050054">+38 (067) 757 77 77</a></p>
             </div>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-email-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#email-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#email-footer"/>
                 </svg></div>
               <p><a href="mailto:d.wave@gmail.com">d.wave@gmail.com</a></p>
             </div>
@@ -356,25 +361,25 @@
             <h4 class="footer__title">Месенджери</h4>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-wapp-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#wapp-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#wapp-footer"/>
                 </svg></div>
               <p><a href="#">+38 (067) 757 77 77</a></p>
             </div>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-telegram-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#telegram-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#telegram-footer"/>
                 </svg></div>
               <p><a href="#">@dwave_space</a></p>
             </div>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-viber-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#viber-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#viber-footer"/>
                 </svg></div>
               <p><a href="#">+38 (067) 757 77 77</a></p>
             </div>
             <div class="footer__contact-block">
               <div class="footer__icon"><svg class="svg-messenger-footer ">
-                  <use xlink:href="img/icons-sprite/icons.svg#messenger-footer"></use>
+                  <use xlink:href="img/icons-sprite/icons.svg#messenger-footer"/>
                 </svg></div>
               <p><a href="#">@dwave_space</a></p>
             </div>

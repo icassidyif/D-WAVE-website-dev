@@ -23,7 +23,7 @@ const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 
 //configurations
-const isProd = false;
+const isProd = true;
 const isDev = !isProd;
 const projectFolder = require('path').basename(__dirname);
 const sourceFolder = 'app';

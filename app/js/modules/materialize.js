@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'materialize-css';
+import {supportsTouch} from "./function";
 
 document.addEventListener('DOMContentLoaded', function() {
   //pushpin
@@ -28,6 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   //End pushpin
 
+  // All modal windows
+  let modals = document.querySelectorAll('.modal:not(.body-project__content)');
+  if (supportsTouch) {
+    let modalInstances = M.Modal.init(modals, {
+      startingTop: '0%',
+      endingTop: '0%'
+    });
+  } else {
+    let modalInstances = M.Modal.init(modals);
+  }
+  // END All modal windows
+
+
   // Modal windows for portfolio projects
   let modalProjectWindows = document.querySelectorAll('.body-project__content');
   if (window.innerWidth < 768) {
@@ -37,13 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
       modalWindow.classList.remove('modal');
     })
   }
-  // End modal windows
+  // End modal windows for portfolio projects
 
-
-  // Toasts
-
-  // END Toasts
-
+  // Select inputs
+  let selectInputs = document.querySelectorAll('select');
+  let selectInstances = M.FormSelect.init(selectInputs);
+  // END Select inputs
 });
 
 

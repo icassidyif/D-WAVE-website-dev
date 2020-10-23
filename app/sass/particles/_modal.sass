@@ -1,21 +1,47 @@
 .modal
+  padding: 20px 20px
+  background: rgba(0, 0, 0, 0.85)
   display: none
   position: fixed
   left: 0
   right: 0
-  background-color: #fafafa
-  padding: 0
-  max-height: 80%
-  width: 90%
+  max-height: 100%
+  width: 100%
+  max-width: 600px
   margin: auto
   overflow-y: auto
   border-radius: 2px
   will-change: top, opacity
   &:focus
     outline: none
+  +breakpoint(sm)
+    padding: 30px 50px
   +breakpoint(md)
-    max-height: 70%
-    width: 55%
+    max-height: 100%
+  +breakpoint(lg)
+    max-height: 100%
+
+  h4, h3
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 0 20px 0
+    span
+      color: $accent-color
+      margin: 0 10px
+
+
+.modal-close
+  display: flex
+  justify-content: flex-end
+  margin: 0 0 10px 0
+  svg
+    width: 25px
+    height: 25px
+    transition: all .2s ease-out
+  &:hover
+    svg
+      transform: scale(1.1)
 
 .modal-overlay
   position: fixed

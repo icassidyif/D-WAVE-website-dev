@@ -96,10 +96,6 @@
       svg
         transform: translateY(-2px)
   &__content
-    padding: 20px 20px
-    background: rgba(0, 0, 0, 0.85)
-    +breakpoint(sm)
-      padding: 30px 50px
     p
       margin: 0 0 15px 0
       &:last-child
@@ -108,18 +104,9 @@
       padding: 50px
       background: rgba(0, 0, 0, 0.75)
   &__close
-    display: flex
-    justify-content: flex-end
     +breakpoint(md)
       display: none
       visibility: hidden
-    svg
-      width: 25px
-      height: 25px
-      transition: all .2s ease-out
-    &:hover
-      svg
-        transform: scale(1.1)
   &__website
     margin: -10px 0 40px 0
     div

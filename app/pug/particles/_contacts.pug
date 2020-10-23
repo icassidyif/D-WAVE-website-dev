@@ -59,8 +59,8 @@ section.contacts.self-block
     .contacts__form.form-contacts.anim-item.anim-no-hide.anim-show-from-right
       .contacts__container
         h4.form-contacts__title.title Напишіть нам
-        form#contact-form
-          .form-contacts__wrapper
+        form.form#contact-form
+          .form__wrapper
             .input-field
               input(id="name-contact" name='name' type="text").validate
               label(for="name-contact") Ваше ім'я
@@ -73,7 +73,7 @@ section.contacts.self-block
             .input-field
               textarea(id="message-contact" name='message').materialize-textarea
               label(for="message-contact") Ваше повідомлення
-          button(type='submit').form-contacts__btn.btn
+          button(type='submit').form__btn.btn
             span.btn__text Надіслати
             +icon('btn-send')
 

@@ -27,8 +27,6 @@ $(document).ready(function(){
         required: true,
         customPhone: true
       },
-      cartOrderMessage: {
-      }
     },
     messages: {
       name: {
@@ -47,12 +45,52 @@ $(document).ready(function(){
       //clear
       form.reset();
       M.toast({html: 'Дякуємо за звернення, скоро ми з вами зв\'яжемось'});
-      // cart.products = {};
-      // products = cart.products;
-      // loadToLocalStorage();
-      // updateCartContent();
-      // let modal = M.Modal.getInstance($('#cart'));
-      // modal.close();
+    }
+  });
+
+
+  $('#order-form').validate({
+    rules: {
+      service: {
+        required: true
+      },
+      name: {
+        required: true
+      },
+      phone: {
+        required: true,
+        customPhone: true
+      },
+      email: {
+        required: true
+      }
+
+    },
+    messages: {
+      service: {
+        required: "Це обов'язкове поле"
+      },
+      name: {
+        required: "Це обов'язкове поле"
+      },
+      phone: {
+        required: "Це обов'язкове поле",
+        customPhone: 'Невірний номер телефону'
+      },
+      email:{
+        required: "Це обов'язкове поле",
+      }
+    },
+    submitHandler: function (form) {
+      // let url = '/php/call.php';
+      let formData = $(form).serializeArray();
+      // ajaxSend(formData, url);
+      console.log(formData);
+      //clear
+      form.reset();
+      M.toast({html: 'Дякуємо за звернення, скоро ми з вами зв\'яжемось'});
+      let modal = M.Modal.getInstance($('#modal-order'));
+      modal.close();
     }
   });
 

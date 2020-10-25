@@ -38,11 +38,8 @@ $(document).ready(function(){
       }
     },
     submitHandler: function (form) {
-      // let url = '/php/call.php';
       let formData = $(form).serializeArray();
-      // ajaxSend(formData, url);
-      console.log(formData);
-      //clear
+      ajaxContactForm(formData);
       form.reset();
       M.toast({html: 'Дякуємо за звернення, скоро ми з вами зв\'яжемось'});
     }
@@ -84,16 +81,12 @@ $(document).ready(function(){
     submitHandler: function (form) {
       // let url = '/php/call.php';
       let formData = $(form).serializeArray();
-      // ajaxSend(formData, url);
-      console.log(formData);
-      //clear
+      ajaxOrderForm(formData);
       form.reset();
       M.toast({html: 'Дякуємо за звернення, скоро ми з вами зв\'яжемось'});
       let modal = M.Modal.getInstance($('#modal-order'));
       modal.close();
     }
   });
-
-
 
 })
